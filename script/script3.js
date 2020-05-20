@@ -1,4 +1,3 @@
-//Получение массива объектов из общего массива объектов по значению ключа name
 'use strict';
 let arr = [
   {name: 'Jonny Walker', birthDate: '1995-12-17'},
@@ -7,13 +6,9 @@ let arr = [
   {name: 'Andrew', birthDate: '2011-05-09'},
 ];
 
-function searchByName(name){
-  let ArrName = [];
-  for(let i = 0; i<arr.length;i++){
-    if(arr[i].name === name){
-      ArrName.push(arr[i]);
-    }
-  }
-  return ArrName; 
+function searchByName(name) {
+  return arr.filter(function(item) {
+    return (item.name == name);
+});
 }
 

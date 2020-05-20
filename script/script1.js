@@ -1,11 +1,12 @@
 // Получение минимального элемента массива
 'use strict';
 function getMin(arr){
-  let getMinArr = '';
-  if(arr.length > 0){
-    getMinArr = Math.min(...arr);
+  if(arr.length === 0){
+    return '';
   }
+  else{
+  let getMinArr = Math.min.apply(null, arr);
   return getMinArr;
+  }
 }
-
 
